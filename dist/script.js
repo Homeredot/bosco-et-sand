@@ -14,7 +14,7 @@ const translations = {
     familyKicker:'Hamwe n’imiryango yabo', familyTitle:'Bishimiye kubatumira', familyIntro:'Umuryango wa Hon. Rev. Senani Benoît n’uwa Mwunvaneza Sebuhinja Pecos, uhagarariwe na Bucana Sebuhinja, bishimiye kubatumira mu bukwe bw’abana babo.',
     dateKicker:'Muzirikane iyi tariki', dateTitle:'Ku wa Gatandatu, 13 Gashyantare 2027', saturday:'Ku wa Gatandatu', february:'Gashyantare', celebration:'Umunsi w’urukundo, ukwizera n’ibyishimo', seeProgramme:'Reba gahunda ↓',
     programmeKicker:'Ibirori', programmeTitle:'Gahunda y’ubukwe', dowryTitle:'Gusaba no gukwa', dowryText:'Umuhango wo gusaba no gukwa', churchTitle:'Umuhango w’idini', churchText:'Église Methodiste Libre mu Rwanda, Paroisse Cathedral ya Gikondo', receptionTitle:'Kwakira abatumiwe', receptionText:'Ibirori byo kwakira abatumiwe', map:'Reba aho biherereye ↗',
-    countKicker:'Tubara iminsi isigaye', countTitle:'Kugeza ku munsi wacu', days:'Iminsi', hours:'Amasaha', minutes:'Iminota', seconds:'Amasegonda', presence:'Kwifatanya natwe bizadushimisha cyane!',
+    storyKicker:'Iteka ryacu ritangiye', storyTitle:'Nzahitamo wowe.\nMu buzima bwose.', storyNote:'Urukundo rumwe, isezerano rimwe, urugendo rwiza.', countKicker:'Tubara iminsi isigaye', countTitle:'Kugeza ku munsi wacu', days:'Iminsi', hours:'Amasaha', minutes:'Iminota', seconds:'Amasegonda', presence:'Kwifatanya natwe bizadushimisha cyane!',
     keepClose:'Mugumane itariki', downloadTitle:'Ubutumire bw’ubukwe', downloadText:'Bika ubutumire bwuzuye kuri telefoni yawe.', downloadButton:'Bika ubutumire',
     contactKicker:'Dutegereje kubana namwe', contactTitle:'Muduhamagare', contactText:'Ku bindi bisobanuro, mushobora kuduhamagara.', bride:'Umugeni', groom:'Umukwe', family:'Umuryango'
   },
@@ -23,7 +23,7 @@ const translations = {
     familyKicker:'Avec leurs familles', familyTitle:'Ont le plaisir de vous inviter', familyIntro:'Les familles Hon. Rev. Senani Benoît et Mwunvaneza Sebuhinja Pecos, représentées par Bucana Sebuhinja, ont le grand plaisir de vous inviter aux cérémonies de mariage de leurs chers enfants.',
     dateKicker:'Réservez la date', dateTitle:'Samedi 13 février 2027', saturday:'Samedi', february:'Février', celebration:"Une journée d’amour, de foi et de célébration", seeProgramme:'Voir le programme ↓',
     programmeKicker:'La célébration', programmeTitle:'Programme du mariage', dowryTitle:'Présentation et remise de la dot', dowryText:'Cérémonie traditionnelle', churchTitle:'Cérémonie religieuse', churchText:'Église Methodiste Libre au Rwanda, Gikondo Cathedral Parish', receptionTitle:'Réception de mariage', receptionText:'Réception avec nos familles et nos amis', map:'Voir la carte ↗',
-    countKicker:'Le compte à rebours', countTitle:'Jusqu’à notre “oui”', days:'Jours', hours:'Heures', minutes:'Minutes', seconds:'Secondes', presence:'Votre présence sera grandement appréciée !',
+    storyKicker:'Notre éternité commence', storyTitle:'Je te choisis.\nDans chaque vie.', storyNote:'Un amour, une promesse, un magnifique voyage.', countKicker:'Le compte à rebours', countTitle:'Jusqu’à notre “oui”', days:'Jours', hours:'Heures', minutes:'Minutes', seconds:'Secondes', presence:'Votre présence sera grandement appréciée !',
     keepClose:'Gardez la date près de vous', downloadTitle:'Notre invitation de mariage', downloadText:'Enregistrez l’invitation bilingue complète sur votre téléphone.', downloadButton:"Télécharger l’invitation",
     contactKicker:'Nous avons hâte de célébrer avec vous', contactTitle:'Contacts', contactText:"Pour toute question ou information complémentaire, n’hésitez pas à appeler.", bride:'La mariée', groom:'Le marié', family:'Famille'
   }
@@ -33,7 +33,10 @@ function setLanguage(lang){
   document.documentElement.lang = lang === 'rw' ? 'rw' : 'fr';
   document.querySelectorAll('[data-copy]').forEach(el => {
     const value = translations[lang][el.dataset.copy];
-    if(value) el.textContent = value;
+    if(value) {
+      if(el.dataset.copy === 'storyTitle') el.innerHTML = value.replace('\n','<br>');
+      else el.textContent = value;
+    }
   });
   langButtons.forEach(button => button.classList.toggle('active', button.dataset.lang === lang));
   localStorage.setItem('invitationLanguage', lang);
