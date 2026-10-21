@@ -16,17 +16,23 @@
 </head>
 <body>
   <div class="entry" id="entry" role="dialog" aria-modal="true" aria-labelledby="entry-title">
-    <div class="entry__glow"></div>
+    <div class="entry__photo" aria-hidden="true"><img src="assets/opening-hands.jpg" alt=""></div>
+    <div class="entry__shade" aria-hidden="true"></div>
+    <div class="entry__grain" aria-hidden="true"></div>
+    <div class="entry__frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+    <p class="entry__place" aria-hidden="true">Kigali · Rwanda</p>
+    <div class="entry__seal" aria-hidden="true"><span>S</span><i>&</i><span>B</span></div>
     <div class="entry__card">
-      <p class="eyebrow">A wedding invitation</p>
-      <div class="mini-monogram">S <span>&</span> B</div>
-      <h1 id="entry-title">Sand & Bosco</h1>
-      <p>Two hearts, one promise, one beautiful beginning.</p>
-      <button class="button button--solid" id="enter-button" type="button">
-        <span>Open invitation</span><span aria-hidden="true">♪</span>
+      <p class="eyebrow">A love written by God</p>
+      <div class="entry__rule"><span></span><b>13 · 02 · 2027</b><span></span></div>
+      <h1 id="entry-title"><span>Sand</span><i>&</i><span>Bosco</span></h1>
+      <p class="entry__promise">Two hands held. Two hearts promised.<br>One forever begins here.</p>
+      <button class="button entry__button" id="enter-button" type="button">
+        <span>Open our invitation</span><span class="entry__button-icon" aria-hidden="true">♪</span>
       </button>
       <small>Tap to enter with music</small>
     </div>
+    <p class="entry__swipe" aria-hidden="true"><span></span> Together, always</p>
   </div>
 
   <audio id="wedding-music" src="assets/our-forever.wav" loop autoplay preload="auto"></audio>
