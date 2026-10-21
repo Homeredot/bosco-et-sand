@@ -9,14 +9,14 @@ document.body.classList.add('locked');
 music.volume = 0.36;
 
 const translations = {
-  rw: {
-    kicker:'Urukundo rw’abantu babiri', verseTitle:'Icyo Imana yateranyije', verse:'“Ni cyo gituma umuntu azasiga se na nyina, akabana n’umugore we akaramata, bombi bakaba umubiri umwe.”', verseRef:'Itangiriro 2:24',
-    familyKicker:'Hamwe n’imiryango yabo', familyTitle:'Bishimiye kubatumira', familyIntro:'Umuryango wa Hon. Rev. Senani Benoît n’uwa Mwunvaneza Sebuhinja Pecos, uhagarariwe na Bucana Sebuhinja, bishimiye kubatumira mu bukwe bw’abana babo.',
-    dateKicker:'Muzirikane iyi tariki', dateTitle:'Ku wa Gatandatu, 13 Gashyantare 2027', saturday:'Ku wa Gatandatu', february:'Gashyantare', celebration:'Umunsi w’urukundo, ukwizera n’ibyishimo', seeProgramme:'Reba gahunda ↓',
-    programmeKicker:'Ibirori', programmeTitle:'Gahunda y’ubukwe', dowryTitle:'Gusaba no gukwa', dowryText:'Umuhango wo gusaba no gukwa', churchTitle:'Umuhango w’idini', churchText:'Église Methodiste Libre mu Rwanda, Paroisse Cathedral ya Gikondo', receptionTitle:'Kwakira abatumiwe', receptionText:'Ibirori byo kwakira abatumiwe', map:'Reba aho biherereye ↗',
-    storyKicker:'Iteka ryacu ritangiye', storyTitle:'Nzahitamo wowe.\nMu buzima bwose.', storyNote:'Urukundo rumwe, isezerano rimwe, urugendo rwiza.', countKicker:'Tubara iminsi isigaye', countTitle:'Kugeza ku munsi wacu', days:'Iminsi', hours:'Amasaha', minutes:'Iminota', seconds:'Amasegonda', presence:'Kwifatanya natwe bizadushimisha cyane!',
-    keepClose:'Mugumane itariki', downloadTitle:'Ubutumire bw’ubukwe', downloadText:'Bika ubutumire bwuzuye kuri telefoni yawe.', downloadButton:'Bika ubutumire',
-    contactKicker:'Dutegereje kubana namwe', contactTitle:'Muduhamagare', contactText:'Ku bindi bisobanuro, mushobora kuduhamagara.', bride:'Umugeni', groom:'Umukwe', family:'Umuryango'
+  en: {
+    kicker:'Two lives, one sacred love', verseTitle:'What God has joined together', verse:'“Therefore a man shall leave his father and his mother and hold fast to his wife, and they shall become one flesh.”', verseRef:'Genesis 2:24',
+    familyKicker:'Together with their beloved families', familyTitle:'Joyfully invite you to celebrate their union', familyIntro:'The families of Hon. Rev. Senani Benoît and Mwunvaneza Sebuhinja Pecos, represented by Bucana Sebuhinja, warmly invite you to celebrate the wedding of their beloved children.',
+    dateKicker:'Save the date', dateTitle:'Saturday, 13 February 2027', saturday:'Saturday', february:'February', celebration:'A beautiful day of love, faith and celebration', seeProgramme:'See the programme ↓',
+    programmeKicker:'The celebration', programmeTitle:'The wedding day', dowryTitle:'Introduction & Dowry Ceremony', dowryText:'A traditional celebration bringing our families together', churchTitle:'Religious Wedding Ceremony', churchText:'Église Methodiste Libre au Rwanda, Gikondo Cathedral Parish', receptionTitle:'Wedding Reception', receptionText:'Dinner, joy and celebration with family and friends', map:'View map ↗',
+    storyKicker:'Our forever begins', storyTitle:'I choose you.\nIn every lifetime.', storyNote:'One love, one promise, one beautiful journey.', countKicker:'Counting down to forever', countTitle:'Until we say “I do”', days:'Days', hours:'Hours', minutes:'Minutes', seconds:'Seconds', presence:'Your presence will make our celebration complete.',
+    keepClose:'Keep the date close', downloadTitle:'Our wedding invitation', downloadText:'Save the original wedding invitation to your phone and keep every detail close.', downloadButton:'Download invitation',
+    contactKicker:'We cannot wait to celebrate with you', contactTitle:'Contact us', contactText:'For questions or additional information, please feel free to call.', bride:'Bride', groom:'Groom', family:'Family'
   },
   fr: {
     kicker:'Deux vies, un amour', verseTitle:'Ce que Dieu a uni', verse:"« C’est pourquoi l’homme quittera son père et sa mère, et s’attachera à sa femme, et ils deviendront une seule chair. »", verseRef:'Genèse 2:24',
@@ -30,7 +30,7 @@ const translations = {
 };
 
 function setLanguage(lang){
-  document.documentElement.lang = lang === 'rw' ? 'rw' : 'fr';
+  document.documentElement.lang = lang === 'en' ? 'en' : 'fr';
   document.querySelectorAll('[data-copy]').forEach(el => {
     const value = translations[lang][el.dataset.copy];
     if(value) {
@@ -43,7 +43,7 @@ function setLanguage(lang){
 }
 
 langButtons.forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
-setLanguage(localStorage.getItem('invitationLanguage') || 'rw');
+setLanguage(localStorage.getItem('invitationLanguage') === 'fr' ? 'fr' : 'en');
 
 async function startMusic(){
   try { await music.play(); setMusicState(true); }
