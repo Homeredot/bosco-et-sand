@@ -191,7 +191,7 @@ footer small { opacity:.55; letter-spacing:.2em; text-transform:uppercase; font-
 @keyframes entryCard { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:none; } }
 
 @media (max-width:760px){
-  .entry { align-items:start; justify-items:center; padding:56px 24px 80px; }
+  .entry { align-items:center; justify-items:center; padding:44px 24px 72px; }
   .entry__photo img { object-position:center center; filter:contrast(1.12) brightness(.75); }
   .entry__shade { background:linear-gradient(180deg,rgba(13,6,4,.88) 0%,rgba(26,11,7,.52) 36%,rgba(35,15,9,.12) 63%,rgba(16,7,4,.76) 100%); }
   .entry__frame { inset:10px; }
