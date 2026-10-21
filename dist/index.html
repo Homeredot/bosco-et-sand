@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6e2f12">
+  <meta name="description" content="You are warmly invited to celebrate the wedding of Akimana Sand and Twizere Bosco on 13 February 2027.">
+  <meta property="og:title" content="Sand & Bosco — Wedding Invitation">
+  <meta property="og:description" content="13 February 2027 · Kigali, Rwanda">
+  <meta property="og:image" content="/assets/sand-bosco-invitation.jpg">
+  <title>Sand & Bosco | Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="entry" id="entry" role="dialog" aria-modal="true" aria-labelledby="entry-title">
+    <div class="entry__glow"></div>
+    <div class="entry__card">
+      <p class="eyebrow">A wedding invitation</p>
+      <div class="mini-monogram">S <span>&</span> B</div>
+      <h1 id="entry-title">Sand & Bosco</h1>
+      <p>Two hearts, one promise, one beautiful beginning.</p>
+      <button class="button button--solid" id="enter-button" type="button">
+        <span>Open invitation</span><span aria-hidden="true">♪</span>
+      </button>
+      <small>Tap to enter with music</small>
+    </div>
+  </div>
+
+  <audio id="wedding-music" src="assets/our-forever.wav" loop autoplay preload="auto"></audio>
+
+  <button class="music-control" id="music-control" type="button" aria-label="Pause music" title="Music">
+    <span class="music-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span id="music-label">Music on</span>
+  </button>
+
+  <nav class="language-switch" aria-label="Invitation language">
+    <button type="button" data-lang="rw" class="active">Kinyarwanda</button>
+    <span aria-hidden="true">/</span>
+    <button type="button" data-lang="fr">Français</button>
+  </nav>
+
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="botanical botanical--top" aria-hidden="true">
+        <span class="leaf l1"></span><span class="leaf l2"></span><span class="leaf l3"></span>
+        <span class="bloom b1"></span><span class="bloom b2"></span>
+      </div>
+      <div class="hero__wash"></div>
+      <div class="hero__content reveal">
+        <p class="eyebrow">The wedding celebration of</p>
+        <div class="monogram" aria-hidden="true"><span>S</span><i></i><span>B</span></div>
+        <h1><span class="given">Akimana</span> <span class="script">Sand</span><b>&</b><span class="given">Twizere</span> <span class="script">Bosco</span></h1>
+        <p class="hero__date">13 · 02 · 2027</p>
+        <p class="hero__place">Kigali, Rwanda</p>
+        <a class="scroll-cue" href="#invitation" aria-label="Continue to invitation"><span></span></a>
+      </div>
+      <div class="botanical botanical--bottom" aria-hidden="true">
+        <span class="leaf l1"></span><span class="leaf l2"></span><span class="leaf l3"></span><span class="bloom b1"></span>
+      </div>
+    </section>
+
+    <section class="verse section" id="invitation">
+      <div class="section__inner narrow reveal">
+        <p class="kicker" data-copy="kicker">Two lives, one love</p>
+        <h2 data-copy="verseTitle">What God has joined together</h2>
+        <div class="ornament"><span></span><b>✦</b><span></span></div>
+        <blockquote data-copy="verse">“Ni cyo gituma umuntu azasiga se na nyina, akabana n’umugore we akaramata, bombi bakaba umubiri umwe.”</blockquote>
+        <cite data-copy="verseRef">Itangiriro 2:24</cite>
+      </div>
+    </section>
+
+    <section class="families section section--peach">
+      <div class="section__inner reveal">
+        <p class="kicker" data-copy="familyKicker">Together with their families</p>
+        <h2 data-copy="familyTitle">With joyful hearts, they invite you</h2>
+        <p class="family-intro" data-copy="familyIntro">Umuryango wa Hon. Rev. Senani Benoît n’uwa Mwunvaneza Sebuhinja Pecos, uhagarariwe na Bucana Sebuhinja, bishimiye kubatumira mu bukwe bw’abana babo.</p>
+        <div class="name-lockup">
+          <div><span>Akimana</span><strong>Sand</strong></div>
+          <b>&</b>
+          <div><span>Twizere</span><strong>Bosco</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="date-section section">
+      <div class="section__inner reveal">
+        <p class="kicker" data-copy="dateKicker">Save the date</p>
+        <h2 data-copy="dateTitle">Saturday, 13 February 2027</h2>
+        <div class="date-card">
+          <div class="date-card__day"><span data-copy="saturday">Saturday</span><strong>13</strong><span data-copy="february">February</span></div>
+          <div class="date-card__message">
+            <span data-copy="celebration">A full day of love, faith and celebration</span>
+            <strong>Kigali, Rwanda</strong>
+            <a href="#programme" data-copy="seeProgramme">See the programme ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="programme section" id="programme">
+      <div class="section__inner">
+        <div class="reveal">
+          <p class="kicker" data-copy="programmeKicker">The celebration</p>
+          <h2 data-copy="programmeTitle">Our wedding programme</h2>
+        </div>
+        <div class="timeline">
+          <article class="event-card reveal">
+            <div class="event-card__icon" aria-hidden="true">✦</div>
+            <time>09:00</time>
+            <div><h3 data-copy="dowryTitle">Gusaba no gukwa</h3><p data-copy="dowryText">Presentation and dowry ceremony</p><strong>Heaven Garden Rebero</strong><a href="https://www.google.com/maps/search/?api=1&query=Heaven+Garden+Rebero+Kigali" target="_blank" rel="noreferrer" data-copy="map">View map ↗</a></div>
+          </article>
+          <article class="event-card reveal">
+            <div class="event-card__icon church" aria-hidden="true">⌂</div>
+            <time>14:00</time>
+            <div><h3 data-copy="churchTitle">Umuhango w’idini</h3><p data-copy="churchText">Église Methodiste Libre au Rwanda, Gikondo Cathedral Parish</p><strong>Gikondo, Kigali</strong><a href="https://www.google.com/maps/search/?api=1&query=Eglise+Methodiste+Libre+au+Rwanda+Gikondo+Cathedral" target="_blank" rel="noreferrer" data-copy="map">View map ↗</a></div>
+          </article>
+          <article class="event-card reveal">
+            <div class="event-card__icon" aria-hidden="true">♢</div>
+            <time>17:00</time>
+            <div><h3 data-copy="receptionTitle">Kwakira abatumiwe</h3><p data-copy="receptionText">Wedding reception</p><strong>Heaven Garden Rebero</strong><a href="https://www.google.com/maps/search/?api=1&query=Heaven+Garden+Rebero+Kigali" target="_blank" rel="noreferrer" data-copy="map">View map ↗</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="countdown section">
+      <div class="countdown__halo"></div>
+      <div class="section__inner reveal">
+        <p class="kicker" data-copy="countKicker">Counting down to forever</p>
+        <h2 data-copy="countTitle">Until we say “I do”</h2>
+        <div class="counter" aria-label="Countdown to the wedding">
+          <div><strong id="days">000</strong><span data-copy="days">Days</span></div>
+          <div><strong id="hours">00</strong><span data-copy="hours">Hours</span></div>
+          <div><strong id="minutes">00</strong><span data-copy="minutes">Minutes</span></div>
+          <div><strong id="seconds">00</strong><span data-copy="seconds">Seconds</span></div>
+        </div>
+        <p class="countdown__note" data-copy="presence">Your presence will make our celebration complete.</p>
+      </div>
+    </section>
+
+    <section class="invitation-card section">
+      <div class="section__inner invitation-card__grid reveal">
+        <div class="invitation-preview"><img src="assets/sand-bosco-invitation.jpg" alt="Original Sand and Bosco wedding invitation" loading="lazy"></div>
+        <div class="invitation-card__copy">
+          <p class="kicker" data-copy="keepClose">Keep the date close</p>
+          <h2 data-copy="downloadTitle">Our wedding invitation</h2>
+          <p data-copy="downloadText">Save the complete bilingual invitation to your phone.</p>
+          <a class="button button--solid" href="assets/sand-bosco-invitation.jpg" download data-copy="downloadButton">Download invitation</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts section">
+      <div class="section__inner">
+        <div class="reveal">
+          <p class="kicker" data-copy="contactKicker">We cannot wait to celebrate with you</p>
+          <h2 data-copy="contactTitle">Contact us</h2>
+          <p class="contact-lead" data-copy="contactText">For questions or additional information, please feel free to call.</p>
+        </div>
+        <div class="contact-grid">
+          <article class="contact-card reveal"><span data-copy="bride">Bride</span><h3>Sand</h3><a href="tel:+250782311787">0782 311 787</a></article>
+          <article class="contact-card reveal"><span data-copy="groom">Groom</span><h3>Bosco</h3><a href="tel:+16134139343">+1 613 413 9343</a><a href="tel:+250795765582">+250 795 765 582</a></article>
+          <article class="contact-card reveal"><span data-copy="family">Family</span><h3>Hon. Benoît</h3><a href="tel:+250788855874">0788 855 874</a></article>
+          <article class="contact-card reveal"><span data-copy="family">Family</span><h3>Providence</h3><a href="tel:+250783143479">0783 143 479</a></article>
+          <article class="contact-card reveal"><span data-copy="family">Family</span><h3>Charlotte</h3><a href="tel:+18195921339">+1 819 592 1339</a></article>
+          <article class="contact-card reveal"><span data-copy="family">Family</span><h3>Bucana</h3><a href="tel:+256790303270">+256 790 303 270</a></article>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-monogram">S <span>&</span> B</div>
+      <p>Sand & Bosco</p>
+      <small>13 February 2027 · Kigali</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
